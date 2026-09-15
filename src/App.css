@@ -1,0 +1,279 @@
+/* Página */
+.pagina {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 650px;
+  padding: 35px;
+  border-radius: 20px;
+  background: rgba(212, 207, 201, 0.75);
+  border: 1px solid rgba(212, 207, 201, 0.8);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(10px);
+}
+
+.container h1 {
+  margin-bottom: 28px;
+  text-align: center;
+  font-size: 38px;
+  color: rgb(27, 56, 64);
+}
+
+/* Formulário */
+.formulario {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.campo-tarefa {
+  flex: 1;
+  min-width: 0;
+  padding: 13px 15px;
+  border: 1px solid rgb(94, 134, 145);
+  border-radius: 8px;
+  background: rgba(94, 134, 145, 0.6);
+  color: rgb(27, 56, 64);
+  font-size: 16px;
+  outline: none;
+}
+
+.campo-tarefa:focus {
+  border-color: rgb(27, 56, 64);
+  box-shadow: 0 0 0 3px rgba(94, 134, 154, 0.15);
+}
+
+.botao-adicionar {
+  padding: 13px 18px;
+  border: none;
+  border-radius: 8px;
+  background: rgb(94, 134, 145);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.botao-adicionar:hover {
+  background: rgb(27, 56, 64);
+}
+
+/* Filtros */
+.filtros {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.filtro {
+  padding: 9px 16px;
+  border: 1px solid #ced4da;
+  border-radius: 20px;
+  background: #ffffff;
+  color: rgb(27, 56, 64);
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.filtro:hover {
+  border-color: rgb(27, 56, 64);
+  color: rgb(27, 56, 64);
+}
+
+.filtro.ativo {
+  background: rgb(94, 134, 145);
+  border-color: rgb(27, 56, 64);
+  color: #ffffff;
+}
+
+/* Tarefas */
+.lista-tarefas {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tarefa {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 14px 16px;
+  border: 1px solid #e1e5e8;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.85);
+  transition: 0.2s;
+}
+
+.tarefa:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.tarefa-conteudo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  flex: 1;
+  cursor: pointer;
+}
+
+.tarefa-conteudo input {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.tarefa-conteudo span {
+  font-size: 16px;
+  word-break: break-word;
+}
+
+.tarefa.concluida .tarefa-conteudo span {
+  text-decoration: line-through;
+  opacity: 0.55;
+}
+
+/* Botão Remover */
+.botao-remover {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 7px;
+  background: rgb(176, 55, 56);
+  color: #ffffff;
+  font-size: 14px;
+  flex-shrink: 0;
+  transition: 0.2s;
+}
+
+.botao-remover:hover {
+  background: rgb(94, 29, 26);
+}
+
+/* Mensagem vazia */
+.mensagem-vazia {
+  padding: 25px;
+  text-align: center;
+  color: rgb(27, 56, 64);
+  font-size: 15px;
+}
+
+/* Responsividade */
+
+@media (max-width: 600px) {
+  .pagina {
+    padding: 30px 15px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 25px 18px;
+    border-radius: 15px;
+  }
+
+  .container h1 {
+    font-size: 30px;
+    margin-bottom: 22px;
+  }
+
+  /* Formulário */
+
+  .formulario {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .campo-tarefa {
+    width: 100%;
+  }
+
+  .botao-adicionar {
+    width: 100%;
+  }
+
+  /* Filtros */
+
+  .filtros {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .filtro {
+    flex: 1;
+    min-width: 90px;
+  }
+
+  /* Tarefas */
+
+  .tarefa {
+    width: 100%;
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .tarefa-conteudo {
+    min-width: 0;
+    gap: 9px;
+  }
+
+  .tarefa-conteudo span {
+    font-size: 15px;
+    overflow-wrap: anywhere;
+  }
+
+  .botao-remover {
+    flex-shrink: 0;
+    padding: 7px 10px;
+    font-size: 13px;
+  }
+}
+
+/* Celulares menores */
+@media (max-width: 400px) {
+  .pagina {
+    padding: 20px 10px;
+  }
+
+  .container {
+    padding: 22px 14px;
+  }
+
+  .container h1 {
+    font-size: 27px;
+  }
+
+  .filtros {
+    gap: 6px;
+  }
+
+  .filtro {
+    min-width: 80px;
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  .tarefa {
+    align-items: flex-start;
+  }
+
+  .tarefa-conteudo {
+    align-items: flex-start;
+  }
+
+  .tarefa-conteudo input {
+    margin-top: 2px;
+  }
+
+  .botao-remover {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+}
