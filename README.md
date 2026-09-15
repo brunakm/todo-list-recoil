@@ -62,6 +62,7 @@ todo-list-recoil/
 ├── index.html
 ├── package.json
 └── vite.config.js
+```
 
 ## 💻 Como executar o projeto
 
